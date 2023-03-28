@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using MyProgram;
-using System;
 
 Teacher teacher = new Teacher();
 teacher.Name = "John";
@@ -87,6 +86,30 @@ namespace MyProgram
             StudentsQty = studentsQty;
         }
 
+    }
+    public class ListManager<T>
+    {
+        private List<T> items;
+
+        public ListManager()
+        {
+            items = new List<T>();
+        }
+
+        public void Add(T item)
+        {
+            items.Add(item);
+        }
+
+        public void Remove(T item)
+        {
+            items.Remove(item);
+        }
+
+        public int Count()
+        {
+            return items.Count;
+        }
     }
 }
 
